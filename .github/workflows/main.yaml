@@ -6,8 +6,9 @@ on:
       - dev
 
 jobs:
-  laravel-tests:
+  build:
     runs-on: ubuntu-latest
+
       steps: 
         - name: Setup PHP with tools
             uses: shivammathur/setup-php@v2
