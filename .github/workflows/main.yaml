@@ -1,14 +1,18 @@
-name: Min Htaw Lon
+name: "Min Htaw Lon"
   on: 
     pull_request:
       branches:
-      -dev
+        -dev
 
   jobs:
     build:
-      name: Build Docker Images
+      name: "Build Docker Images"
       runs-on: ubuntu-latest
       steps: 
-      -name: Testing step
-      run: |
+        - name: Setup PHP with tools
+            uses: shivammathur/setup-php@v2
+            with:
+              php-version: '8.3'
+        - name: "Testing step"
+          run: |
           echo "Hello Wrold"
